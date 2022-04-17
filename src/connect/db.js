@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const db = "mongodb://localhost:27017/react-redux-a-2"
 module.exports = () => {
-    return mongoose.connect("mongodb://localhost:27017/react-redux-a-2")
+    return mongoose.connect(db)
 }

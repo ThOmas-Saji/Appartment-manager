@@ -12,11 +12,11 @@ app.use(cors());
 app.use("/flat", flatController)
 app.use("/user", userController)
 
-const PORT = 8080
-app.listen(PORT, async()=>{
+const port = process.env.PORT || 8080;
+app.listen(port, async()=>{
     try{
        await connect();
-        console.log(`Listening to Port no: ${PORT} `)
+        console.log(`Listening to Port no: ${port} `)
     }catch(err){
         console.log(err)
     }
